@@ -30,11 +30,11 @@ module.exports = {
         } else if(args.length = message.mentions.users.size+1){
             user = message.mentions.members.first()
             args.shift()
-            // TODO: assign role
-            /*if(roles.includes(args[0])){
-                role = message.guild.roles.cache.find(r => r.name = args[0])
-                user.roles.add(role)
-            }*/
+            if(roles.includes(args[0])){
+                role = message.guild.roles.cache.find(r => r.name === args[0]);
+                user.roles.add(role);
+                message.reply(`Role ${args[0]} has been added to ${user.username}`);
+            }
         }        
 	},
 };
