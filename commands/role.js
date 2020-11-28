@@ -1,9 +1,13 @@
 module.exports = {
 	name: 'role',
-	description: 'to give a role to user!',
+	description: 'Special features regarding roles like showing all roles of guilds, showing roles of certain member and assiging role to certain mamber.',
     args: false,
     requiresAdministrativePower: true,
-    usage: '<user>, <role>',
+    usage: `
+            To view available roles: <>
+            To view roles of  member: <@user>
+            To assign a role to user: <@user> <role>
+            `,
     guildOnly: true,
 	execute(message, args) {
         roles = []
